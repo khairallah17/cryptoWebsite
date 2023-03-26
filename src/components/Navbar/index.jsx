@@ -6,7 +6,8 @@ import { Outlet } from 'react-router-dom'
 const nav = [
     {name: "Home", href: "/"},
     {name: "About", href:"/about"},
-    {name: "Contact", href: "/contact"}]
+    {name: "Contact", href: "/contact"},
+    {name: "Market Watch", href: '/market'}]
 
 const Navbar = () => {
   return (

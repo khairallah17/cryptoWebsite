@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index/>}/>
-        <Route path="/cryptocurrencies" element={<Cryptocurrencies/>}/>
+        <Route path="/market" element={<Cryptocurrencies/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/contacts/*" element={<ContactInfo/>}/>
         <Route path='/privacyPolicy' element={<PrivacyPolicy/>} />

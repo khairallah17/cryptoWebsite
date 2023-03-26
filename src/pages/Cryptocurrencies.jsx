@@ -5,6 +5,7 @@ import axios from 'axios'
 const Cryptocurrencies = () => {
   
   const [cryptos, setCryptos] = useState([])
+  const [filtredData, setFiltredData] = useState([])
 
   useEffect(() => {
 
@@ -12,7 +13,7 @@ const Cryptocurrencies = () => {
 
       const result = await axios(({
         method: 'get',
-        url: 'https://api.coingecko.com/api/v3/simple/supported_vs_currencies',
+        url: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
@@ -22,28 +23,45 @@ const Cryptocurrencies = () => {
 
       setCryptos(data)
 
-      console.log(data)
-
+      setFiltredData(data)
     }
 
     fetchCrypto()
 
   },[])
   
+  const handleSearch = (search) => {
+
+    const exData = [...cryptos]
+    const newData = exData.filter((ex) => {
+      return (
+        ex.id.startsWith(search.toLowerCase())
+      )
+    })
+
+    setFiltredData(newData)
+
+  }
+
   return (
     <Layout>
-      <div className="container mx-auto">
-        <ul>
+      <div className="container mx-auto mt-20 d-flex justify-center w-full">
+        <div className="flex justify-center flex-col gap-5">
+        <input type="text" name="search" placeholder='Search here...' onChange={(e) => handleSearch(e.target.value)} id="" className=' rounded-lg px-1 py-1 border-[1px] border-primary bg-transparent'/>
+        <ul className='flex flex-col gap-5'>
         {
-          cryptos.map((data, key) => {
+          filtredData.map((data, key) => {
             return(
-              <li key={key}>
-                {data}
+              <li key={key} className=" bg-gray px-7 py-4 rounded-lg flex w-full justify-between">
+                <img src={data.image} alt="" className=' w-6'/>
+                <span className='capitalize'>{data.id}</span>
+                <span>{data.current_price} USD</span>
               </li>
             )   
           })
         }
         </ul>
+        </div>
       </div>
     </Layout>
   )
