@@ -14,18 +14,21 @@ const CryptoPrices = () => {
       const fetchCrypto = async () => {
   
         const result = await axios(({
-          method: 'get',
-          url: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
-          }    
-        }))
+            method: 'get',
+            url: 'http://localhost:3060/api',
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Content-Type': 'application/json',
+            }    
+          }))
+
         const data = result.data
 
         console.log(data)
   
         setCryptos(data)
+
+        setGet(data[0].quote.USD.price)
   
       }
   
@@ -42,16 +45,16 @@ const CryptoPrices = () => {
                 <div className="flex gap-4">
                     <input name='amount' placeholder='Amount' type="number" onChange={(e) => setAmount(e.target.value)}  className="border border-primary bg-transparent rounded-xl p-4 flex items-center outline-none w-full"/>
                     <div className="gap-2 uppercase currency flex w-1/3 border border-primary rounded-2xl items-center px-6">
-                        <span>CAD</span>
+                        <span>USD</span>
                     </div>
                 </div>
                 <div className="flex gap-4 my-4">
-                    <input name='get' placeholder='Get' value={(amount * 1.73) / get}  className="border border-primary bg-transparent rounded-xl p-4 flex items-center outline-none w-full"/>
+                    <input name='get' placeholder='Get' value={amount / get}  className="border border-primary bg-transparent rounded-xl p-4 flex items-center outline-none w-full"/>
                     <select className="gap-2 uppercase currency flex w-1/3 border border-primary bg-transparent rounded-2xl items-center px-6">
                         {
                             cryptos.map((data, key) => {
                                 return (
-                                    <option key={key} onClick={() => setGet(data.current_price)} value="btc" className='gap-2 uppercase currency'>
+                                    <option key={key} onClick={() => setGet(data.quote.USD.price)} value="btc" className='gap-2 uppercase currency'>
                                         {data.symbol}
                                     </option>
                                 )

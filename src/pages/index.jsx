@@ -12,7 +12,6 @@ const Index = () => {
     <Layout>
         <Hero></Hero>
         <CryptoPrices></CryptoPrices>
-        <Partners></Partners>
         <Security></Security>
         <Faq></Faq>
     </Layout>

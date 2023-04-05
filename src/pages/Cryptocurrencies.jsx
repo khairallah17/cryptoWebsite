@@ -13,7 +13,7 @@ const Cryptocurrencies = () => {
 
       const result = await axios(({
         method: 'get',
-        url: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
+        url: 'http://localhost:3060/api',
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
@@ -32,14 +32,14 @@ const Cryptocurrencies = () => {
   
   const handleSearch = (search) => {
 
-    const exData = [...cryptos]
-    const newData = exData.filter((ex) => {
-      return (
-        ex.id.startsWith(search.toLowerCase())
-      )
-    })
+    // const exData = [...cryptos]
+    // const newData = exData.filter((ex) => {
+    //   return (
+    //     ex.id.startsWith(search.toLowerCase())
+    //   )
+    // })
 
-    setFiltredData(newData)
+    // setFiltredData(newData)
 
   }
 
@@ -53,9 +53,9 @@ const Cryptocurrencies = () => {
           filtredData.map((data, key) => {
             return(
               <li key={key} className=" bg-gray px-7 py-4 rounded-lg flex w-full justify-between">
-                <img src={data.image} alt="" className=' w-6'/>
-                <span className='capitalize'>{data.id}</span>
-                <span>{data.current_price} USD</span>
+                {/* <img src={data.image} alt="" className=' w-6'/> */}
+                <span className='capitalize'>{data.name}</span>
+                <span>{data.quote.USD.price} USD</span>
               </li>
             )   
           })
