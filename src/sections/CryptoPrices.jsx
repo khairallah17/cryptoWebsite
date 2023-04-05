@@ -15,7 +15,7 @@ const CryptoPrices = () => {
   
         const result = await axios(({
             method: 'get',
-            url: 'http://localhost:3060/api',
+            url: 'https://crypto-website-server.vercel.app/api',
             headers: {
               'Access-Control-Allow-Origin': '*',
               'Content-Type': 'application/json',
