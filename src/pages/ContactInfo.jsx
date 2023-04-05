@@ -22,8 +22,8 @@ const ContactInfo = () => {
   return (
     <Layout>
         <section id="contact" className='h-full'>
-          <div className="container mx-auto flex p-10 justify-center items-center flex-wrap h-full">
-            <div className="left-contact w-1/2 border-r border-gray  h-full">
+          <div className="container mx-auto grid md:grid-cols-2 justify-between items-center p-10 gap-y-10">
+            <div className="left-contact border-r border-gray w-full h-full">
               <h1 className='capitalize mb-10 font-bold text-3xl'>Write Us a message here 👇</h1>
             <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3 items-start">
               <input type="text" placeholder='fullName' name="user_name" className='px-2 py-2 bg-transparent border-2 border-gray rounded-md w-4/5 outline-none'/>
@@ -32,7 +32,7 @@ const ContactInfo = () => {
               <input type="submit" value="Send" className='cursor-pointer rounded-xl px-6 py-2 bg-gradient-to-br hover:bg-gradient-to-r transition-all duration-300 from-primary to-secondary hover:bg-blend-darken mt-5'/>
             </form>
             </div>
-            <div className="right-contact w-1/2 h-full pl-6">
+            <div className="right-contact h-full w-full pl-6">
               <h1 className='capitalize mb-5 font-bold text-3xl'>Any More information</h1>
               <p className=' leading-5 mb-5'>We are here for you. Do you get any questions or inquiries? Our well-experienced team members will take care of you.
                   Feel free to contact us:</p>
