@@ -38,6 +38,15 @@ const CryptoPrices = () => {
   
     },[])
 
+    const changeCurr = (e) => {
+        const dt = cryptos.filter( (fd) => {
+            if (fd.symbol == e)
+                return fd.quote.USD.price
+        } )
+        
+        setGet(dt[0].quote.USD.price)
+    }
+
   return (
     <section id="cryptoPrices" className="container mx-auto py-48">
         <div className="grid md:grid-cols-2 items-center">
@@ -52,11 +61,11 @@ const CryptoPrices = () => {
                 </div>
                 <div className="flex gap-4 my-4">
                     <input name='get' placeholder='Get' value={amount / get}  className="border border-primary bg-transparent rounded-xl p-4 flex items-center outline-none w-full"/>
-                    <select className="gap-2 uppercase currency flex w-1/3 border border-primary bg-transparent rounded-2xl items-center px-6">
+                    <select onChange={(e) => changeCurr(e.target.value)} className="gap-2 uppercase currency flex w-1/3 border border-primary bg-bg rounded-2xl items-center px-6">
                         {
                             cryptos.map((data, key) => {
                                 return (
-                                    <option key={key} onClick={() => setGet(data.quote.USD.price)} value={data.symbol} className='gap-2 uppercase currency'>
+                                    <option key={key} value={data.symbol} className='gap-2 uppercase currency bg-transparent'>
                                         {data.symbol}
                                     </option>
                                 )
