@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center py-6">
-        <p className="">© Copyright 2023 Zonipsa LLC. All rights reserved</p>
+        <p className="">© Copyright 2023 Zonipsa. All rights reserved</p>
       </div>
     </footer>
   );
