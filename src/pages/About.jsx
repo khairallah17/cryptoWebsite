@@ -6,8 +6,8 @@ const About = () => {
   return (
     <Layout>
         <section className='container mx-auto py-10'>
-            <div className="about-content flex justify-between items-center">
-                <div className="main-content">
+            <div className="about-content grid md:grid-cols-2 justify-between items-center">
+                <div className="main-content md:block flex flex-col md:text-left text-center justify-center items-center">
                     <h1 className='font-bold text-5xl mb-5  bg-gradient-to-t from-primary via-yellow to-secondary text-transparent bg-clip-text'>Who we are</h1>
                     <p className=' leading-8 w-2/3'>Zonipsa is a proudly Canadian-owned exchange registered/Regulated by the Financial Transactions and Reports Analysis Centre of Canada (FINTRAC). this Registration/Regulation helps protect traders like yourself by helping you find the regulated services.
                        <br /> <span className='font-bold'>FINTRAC Registration# :</span>  M22338657</p>
