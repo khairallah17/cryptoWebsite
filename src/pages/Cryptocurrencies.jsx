@@ -51,7 +51,7 @@ const Cryptocurrencies = () => {
         <ul className='flex flex-col gap-5'>
           <li className=" bg-gray text-primary px-7 py-4 rounded-sm flex w-full justify-between">
                   {/* <img src={data.image} alt="" className=' w-6'/> */}
-                  <span className='capitalize'>CRYPTO</span>
+                  <span className='capitalize'>COIN</span>
                   <span>Price/USD</span>
           </li>
         {
