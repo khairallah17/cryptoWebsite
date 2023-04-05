@@ -14,7 +14,7 @@ const ContactInfo = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    emailjs.sendForm('service_bnu5s4w', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

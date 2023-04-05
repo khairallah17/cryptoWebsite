@@ -29,6 +29,8 @@ const CryptoPrices = () => {
         setCryptos(data)
 
         setGet(data[0].quote.USD.price)
+
+        console.log("first price ==> ",data[0].quote.USD.price)
   
       }
   
@@ -54,7 +56,7 @@ const CryptoPrices = () => {
                         {
                             cryptos.map((data, key) => {
                                 return (
-                                    <option key={key} onClick={() => setGet(data.quote.USD.price)} value="btc" className='gap-2 uppercase currency'>
+                                    <option key={key} onClick={() => setGet(data.quote.USD.price)} value={data.symbol} className='gap-2 uppercase currency'>
                                         {data.symbol}
                                     </option>
                                 )
