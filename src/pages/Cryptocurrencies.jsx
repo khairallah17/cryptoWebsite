@@ -60,7 +60,7 @@ const Cryptocurrencies = () => {
               <li key={key} className=" bg-gray px-7 py-4 rounded-lg flex w-full justify-between">
                 {/* <img src={data.image} alt="" className=' w-6'/> */}
                 <span className='capitalize'>{data.name}</span>
-                <span>{data.quote.USD.price.toString().split(".")[0]}</span>
+                <span>{data.quote.USD.price.toFixed(4)}</span>
               </li>
             )   
           })
