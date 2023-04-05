@@ -49,13 +49,18 @@ const Cryptocurrencies = () => {
         <div className="flex justify-center flex-col gap-5">
         <input type="text" name="search" placeholder='Search here...' onChange={(e) => handleSearch(e.target.value)} id="" className=' rounded-lg px-1 py-1 border-[1px] border-primary bg-transparent'/>
         <ul className='flex flex-col gap-5'>
+          <li className=" bg-gray text-primary px-7 py-4 rounded-sm flex w-full justify-between">
+                  {/* <img src={data.image} alt="" className=' w-6'/> */}
+                  <span className='capitalize'>CRYPTO</span>
+                  <span>Price/USD</span>
+          </li>
         {
           filtredData.map((data, key) => {
             return(
               <li key={key} className=" bg-gray px-7 py-4 rounded-lg flex w-full justify-between">
                 {/* <img src={data.image} alt="" className=' w-6'/> */}
                 <span className='capitalize'>{data.name}</span>
-                <span>{data.quote.USD.price} USD</span>
+                <span>{data.quote.USD.price.toString().split(".")[0]} USD</span>
               </li>
             )   
           })
