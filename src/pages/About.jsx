@@ -15,7 +15,7 @@ const About = () => {
                 <img src={AboutUs} alt="" className=' w-[800px]'/>
             </div>
             <div className="content flex flex-col w-full items-center justify-center mt-20">
-                <h1 className='font-bold text-5xl mb-5  bg-gradient-to-t from-primary via-yellow to-secondary text-transparent bg-clip-text'>Who we are</h1>
+                <h1 className='font-bold text-5xl mb-5  bg-gradient-to-t from-primary via-yellow to-secondary text-transparent bg-clip-text'>Our Mission</h1>
                 <p className='text-center text-lg w-3/4 leading-8'>Simplicity, along with self-custody, we all heard: 
                     Not Your Keys, Not Your Coins. It's That Simple.
                     Zonipsa has committed to simplifying purchasing and liquidating cryptocurrencies directly against the Canadian dollar. To achieve our mission, we are in the process of developing our automated non-custodial exchange. That means Canadians can trade cryptocurrencies against the Canadian dollar without transferring their coins custody beforehand or leaving their keys with others after purchasing them. Sounds amazing? Wait, there are more; it's instant, and there is no fee.
