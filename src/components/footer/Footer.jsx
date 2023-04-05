@@ -16,17 +16,11 @@ export default function Footer() {
             </div>
             <ul>
               <li className='mb-4'>
-                <a href="/contact/buy" className=' hover:text-primary'>Buy Crypto</a>
-              </li>
-              <li className='mb-4'>
-                <a href="#cryptoPrices" className=' hover:text-primary'>Exchanges</a>
-              </li>
-              <li className='mb-4'>
                 <a href="/" className=' hover:text-primary'>Watchlist</a>
               </li>
             </ul>
           </div>
-          <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
+          {/* <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
             <ul>
               <li className='mb-4'>
                 <a href="/" className=' hover:text-primary'>Home</a>
@@ -41,12 +35,9 @@ export default function Footer() {
                 <a href="#faq" className=' hover:text-primary'>faq</a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
             <ul>
-              <li className='mb-4'>
-                <a href="/contact" className=' hover:text-primary'>Help Center</a>
-              </li>
               <li className='mb-4'>
                 <a href="/contact" className=' hover:text-primary'>Contact Us</a>
               </li>
