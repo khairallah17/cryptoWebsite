@@ -14,30 +14,12 @@ export default function Footer() {
             <div className='mb-6'>
               <img src={logo} width={100} alt="" />
             </div>
-            <ul>
-              <li className='mb-4'>
-                <a href="/" className=' hover:text-primary'>Watchlist</a>
-              </li>
-            </ul>
           </div>
-          {/* <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
-            <ul>
-              <li className='mb-4'>
-                <a href="/" className=' hover:text-primary'>Home</a>
-              </li>
-              <li className='mb-4'>
-                <a href="/" className=' hover:text-primary'>Cryprocurrencies</a>
-              </li>
-              <li className='mb-4'>
-                <a href="#security" className=' hover:text-primary'>Security</a>
-              </li>
-              <li className='mb-4'>
-                <a href="#faq" className=' hover:text-primary'>faq</a>
-              </li>
-            </ul>
-          </div> */}
           <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
             <ul>
+              <li className='mb-4'>
+                <a href="/market" className=' hover:text-primary'>Market Watch</a>
+              </li>
               <li className='mb-4'>
                 <a href="/contact" className=' hover:text-primary'>Contact Us</a>
               </li>

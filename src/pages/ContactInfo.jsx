@@ -3,14 +3,17 @@ import Layout from '../components/layout'
 import emailjs from '@emailjs/browser';
 import { AiOutlinePhone } from "react-icons/ai"
 import { BsFillEnvelopeFill } from "react-icons/bs"
+import { useEffect } from 'react';
 
 const ContactInfo = () => {
+
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
 
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-
     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
       .then((result) => {
           console.log(result.text);
@@ -32,7 +35,7 @@ const ContactInfo = () => {
               <input type="submit" value="Send" className='cursor-pointer rounded-xl px-6 py-2 bg-gradient-to-br hover:bg-gradient-to-r transition-all duration-300 from-primary to-secondary hover:bg-blend-darken mt-5'/>
             </form>
             </div>
-            <div className="right-contact h-full w-full pl-6">
+            <div className="right-contact h-full w-full md:pl-6 pl-0">
               <h1 className='capitalize mb-5 font-bold text-3xl'>Any More information</h1>
               <p className=' leading-5 mb-5'>We are here for you. Do you get any questions or inquiries? Our well-experienced team members will take care of you.
                   Feel free to contact us:</p>
