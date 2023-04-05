@@ -32,14 +32,14 @@ const Cryptocurrencies = () => {
   
   const handleSearch = (search) => {
 
-    // const exData = [...cryptos]
-    // const newData = exData.filter((ex) => {
-    //   return (
-    //     ex.id.startsWith(search.toLowerCase())
-    //   )
-    // })
+    const exData = [...cryptos]
+    const newData = exData.filter((ex) => {
+      return (
+        ex.slug.startsWith(search.toLowerCase())
+      )
+    })
 
-    // setFiltredData(newData)
+    setFiltredData(newData)
 
   }
 
