@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import { AiOutlineArrowRight } from "react-icons/ai"
 
 import logo from '../../../src/assets/Zonipsa-logo.png';
@@ -18,13 +19,13 @@ export default function Footer() {
           <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
             <ul>
               <li className='mb-4'>
-                <a href="/market" className=' hover:text-primary'>Market Watch</a>
+                <Link to="/market" className=' hover:text-primary'>Market Watch</Link>
               </li>
               <li className='mb-4'>
-                <a href="/contact" className=' hover:text-primary'>Contact Us</a>
+                <Link to="/contact" className=' hover:text-primary'>Contact Us</Link>
               </li>
               <li className='mb-4'>
-                <a href="/privacyPolicy" className=' hover:text-primary'>Privacy Policy</a>
+                <Link to="/privacyPolicy" className=' hover:text-primary'>Privacy Policy</Link>
               </li>
             </ul>
           </div>
