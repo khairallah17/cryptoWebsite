@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="d-flex justify-end">
-          <img src={heroImg} alt="" className=' w-[900px]'/>
+          <img loading="lazy" src={heroImg} alt="" className=' w-[900px]'/>
         </div>
       </div>
     </section>
