@@ -51,7 +51,7 @@ const CryptoPrices = () => {
     <section id="cryptoPrices" className="container mx-auto py-48">
         <div className="grid md:grid-cols-2 items-center">
             <div className='px-10 md:text-start text-center'>
-                <h2 className='leading-normal text-4xl font-bold mb-6'>Watch crypto Prices.</h2>
+                <h2 className='leading-normal text-4xl font-bold mb-6'>Trade With Us</h2>
             
                 <div className="flex gap-4">
                     <input name='amount' placeholder='Amount' type="number" onChange={(e) => setAmount(e.target.value)}  className="border border-primary bg-transparent rounded-xl p-4 flex items-center outline-none w-full"/>
@@ -79,7 +79,7 @@ const CryptoPrices = () => {
                     Buy Now
                 </Button>
             </div>
-            <img src={CryptoImg} alt="" />
+            <img loading='lazy' src={CryptoImg} alt="" />
         </div>
     </section>
   )
