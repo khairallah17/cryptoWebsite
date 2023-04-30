@@ -21,7 +21,7 @@ const Contact = () => {
             text.map((data, key) => {
               return (
                   <div key={key}>
-                    <Link to={`/contacts/${data.text.toLowerCase().split(' ').join("")}`} className=" flex justify-center items-center rounded-full bg-[#707070] w-36 h-36 px-3 py-3">
+                    <Link to={`/contact/${data.text.toLowerCase().split(' ').join("")}`} className=" flex justify-center items-center rounded-full bg-[#707070] w-36 h-36 px-3 py-3">
                       <img src={data.image} alt="" />
                     </Link>
                     <h2 className='mt-5 text-xl'>{data.text}</h2>
